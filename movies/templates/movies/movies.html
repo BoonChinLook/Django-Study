@@ -7,13 +7,10 @@
   </head>
   <body>
     <h1>Movies</h1>
-    {% for movie in movies %}
-    <div class="movie-info">
-      <h2>{{ movie.title }}</h2>
-      <ul>
-        <li>Release Date: {{ movie.year }}</li>
-      </ul>
-    </div>
-    {% endfor %}
+    <ul>
+      {% for movie in movies %}
+      <li><a href="{{ movie.id }}">{{ movie.title }}</a></li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
